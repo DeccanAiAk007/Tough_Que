@@ -1,0 +1,9 @@
+dotenv
+requests 
+sentence-transformers 
+scikit-learn
+pydantic
+typing
+openai
+anthropic
+generativeai
