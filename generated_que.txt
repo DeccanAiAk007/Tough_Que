@@ -1,0 +1,167 @@
+    [1] Generated Question: A block of mass m = 2 kg is given an initial speed vi = 5 m/s and slides down a frictional incline that makes an angle θ = 30 degrees with the horizontal. The coefficient of kinetic friction between the block and the incline is μk = 0.2. The incline is surrounded by a large cylindrical surface of radius R = 5 m. After the block slides down the incline, it will collide with the cylindrical surface at the point of intersection and move along the inner surface of the cylinder. The cylinder is fixed and does not rotate. Given that the block slides along the cylindrical surface without slipping, find the linear velocity of the block immediately after it changes direction from sliding down the incline to moving along the cylindrical surface.(Assume Earth's gravitational acceleration g = 9.81 m/s².)
+
+    Topic Tags: ['mechanics', 'friction', 'conservation of energy', 'conservation of angular momentum', 'trigonometry']
+
+    [Verifying each sub-question...]
+
+    Verification Results:
+    - [✓] Determine the net force acting on the block while it is sliding down the incline, and find the acceleration of the block.
+    - [✓] Calculate the speed of the block (vs) at the exact moment it loses contact with the incline and begins to move along the cylindrical surface.
+    - [✓] Find the linear velocity of the block (vc) immediately after it changes direction and starts moving along the cylindrical surface.
+
+    All sub-questions passed verification. This is a valid hard physics problem!
+
+--------------
+
+    [2] Generated Question: A point-like particle A of rest mass m is fired along the +x axis with constant speed v0 (0 < v0 < c) toward an identical particle B that is initially at rest and rigidly attached to an ideal, mass-less spring of force constant k whose other end is fixed to an immovable wall. The spring lies along the x axis and is unstressed before the collision. Assume the following unless a contradiction is explicitly required to be resolved:
+    (1) The collision between the two particles is perfectly elastic and takes place instantaneously.
+    (2) The spring is light enough that its own relativistic effects can be neglected during the rapid compression phase.
+    (3) Motion is strictly one-dimensional and all surfaces are frictionless.
+    After the collision, particle B begins to move toward the wall, compressing the spring until it momentarily comes to rest at maximum compression x_max (measured from the spring’s natural length). Ignore any energy losses other than those explicitly asked about.
+    Using only the information above and the laws of special relativity and classical spring mechanics, answer the following:
+
+    Topic Tags: ['Relativity', 'Mechanics', 'Energy Conservation', 'Elastic Collision', 'Spring Oscillations']
+
+    [Verifying each sub-question...]
+
+    Verification Results:
+    - [✓] (a) By imposing simultaneous conservation of relativistic linear momentum and total relativistic energy, show that immediately after the collision particle A comes to rest while particle B departs with speed v0. State any hidden assumption you must check and resolve.
+    - [✓] (b) Using your result from part (a), compute the exact relativistic kinetic energy K_B transferred to particle B. Express your answer in terms of m, v0 and c.
+    - [✓] (c) Equate the kinetic energy found in part (b) to the elastic potential energy (1/2) k x_max^2 stored in the spring at maximum compression. Solve symbolically for x_max.
+    - [✓] (d) Verify that your expression for x_max reduces, in the classical limit v0 << c, to the familiar non-relativistic formula and explain any apparent contradiction with part (a).  
+
+    All sub-questions passed verification. This is a valid hard physics problem!
+    
+--------------
+
+    [3] Generated Question: A beam of pions (π⁺), each with rest mass m_π and proper mean lifetime τ₀, is produced in a lab at speed v such that their total energy is E = 10 m_π c². The beam enters a region with a uniform magnetic field B, oriented perpendicular to their velocity. The radius of curvature of the pion trajectory is observed to be r. Assume the pions decay exclusively into two photons (π⁺ → 2γ), with the photons detected at the point where each pion decays, and that the lab measures the spatial separation ΔL along the arc between the entry point and the average decay location. Neglect any effects of interactions other than the magnetic force before decay.
+
+    (a) Derive an expression for the speed v of the pions in terms of E, m_π, and c.
+    (b) Express the radius r of curvature in terms of E, m_π, c, the pion charge q_π, and the magnetic field B.
+    (c) Using relativistic time dilation, find, in terms of E, m_π, c, and τ₀, the average proper time t₀ (as measured in the lab frame) before decay.
+    (d) Using the results above, derive a full symbolic expression for ΔL, the lab-frame arc length traveled on average by a pion before decaying (as a function of E, m_π, c, q_π, B, and τ₀).
+
+    Topic Tags: ['relativity', 'time dilation', 'relativistic particle decay', 'magnetic fields', 'special relativity', 'pion decay']
+
+--------------
+
+    [4] Generated Question: A flexible chain of total length L and uniform mass per unit length λ is initially piled on a smooth table, with a fraction α (0 < α < 1) of its total length hanging vertically over the edge. The chain is released from rest. While falling, the overhanging portion pulls more of the chain off the table until the entire chain has left the table. Assume gravity acts downward with acceleration g, and neglect air resistance. The table edge is rounded so the chain makes a right angle without friction, and there is no energy loss as each link comes off the table. However, due to the finite stiffness of the chain, as each infinitesimal segment leaves the table and suddenly joins the hanging section, it experiences an impulsive inelastic 'jerk'—the segment vertically accelerates from zero (horizontal) velocity to the instantaneous velocity of the falling chain. Assume all such 'jerk' energy dissipation is lost from the system.
+
+    (a) Derive an expression for the velocity v(x) of the falling chain as a function of x, the length of chain already hanging (with αL ≤ x ≤ L), taking into account both variable mass and the kinetic energy lost to the 'jerks' at the table edge.
+    (b) Determine the total energy dissipated due to these 'jerks' by the time the entire chain has left the table.
+    (c) For the case α = 0 (i.e., the chain starts with no overhang and is infinitesimally nudged off the edge), compute the final velocity v_f of the last link of the chain as it leaves the table, in terms of L, λ, and g.
+
+    Topic Tags: ['variable mass mechanics', 'inelastic processes', 'energy dissipation', 'analytical mechanics']
+
+--------------
+
+    [5] Generated Question: A rocket of initial mass M_0 (including fuel) rests vertically on a frictionless platform at Earth's surface, and begins firing its engine at t = 0, ejecting burned fuel downwards at a constant exhaust speed u (relative to the rocket). The rocket burns fuel at a rate β (in kg/s), where β is a function of time: β(t) = β_0 e^{-α t}, with constants β_0 > 0 and α > 0. The exhaust gases exit at the ambient air temperature T_0, but due to incomplete combustion, 10% of the chemical energy is lost as heat, which is radiated away uniformly through the exhaust nozzle. The gravitational acceleration g may be taken as constant and all air resistance is neglected.
+    (a) Derive an explicit expression for the rocket's velocity v(t) as a function of time for t < t_1, where t_1 is when the fuel runs out and the rocket mass reaches the dry mass M_f.    
+    (b) Compute the total work done against gravity during the period 0 < t < t_1. Express your answer in terms of M_0, M_f, g, and other given parameters.
+    (c) Given that the total chemical energy released by the burnt fuel is Q, determine the fraction of Q used to increase the rocket's mechanical energy during lift-off (i.e., from t = 0 to t = t_1), carefully modeling all sources of energy loss described.
+
+    Topic Tags: ['variable mass', 'rocket equation', 'mechanics', 'thermodynamics', 'energy balance']
+
+--------------
+
+    [6] Generated Question: A thin, uniform disc of mass M and radius R is initially at rest and free to rotate without friction about a fixed, vertical axis passing through its center. A small particle of mass m is projected horizontally with speed v0 at a distance d > R/2 from the axis of the disc. The particle passes tangentially to the disc and sticks to its rim at a point whose line to the axis is perpendicular to the particle's initial velocity. The collision is perfectly inelastic. Immediately after the collision: (a) Find the final angular velocity ω_f of the disc + particle system. (b) Determine the fraction of the particle's initial kinetic energy that is converted into rotational kinetic energy of the system. (c) If the axis is not frictionless but exerts a constant resistive torque τ until the system comes to rest, derive an expression for the total angular displacement θ_total traversed after the collision, before coming to rest.
+
+    Topic Tags: ['rotational_dynamics', 'angular_momentum', 'collision', 'mechanics']
+
+--------------
+
+    [7] Generated Question: A particle of mass m and charge q is released from rest at the origin inside a large evacuated cylindrical chamber whose axis is along the z-axis. The chamber rotates at constant angular velocity Ω about the z-axis. Simultaneously, a spatially varying magnetic field exists in the chamber, given by B(r) = B₀ (r / R) ẑ, where r = sqrt(x² + y²), B₀ and R are constants, and ẑ is the unit vector along z. The whole chamber and field apparatus is inside a spacecraft accelerating upwards (along +z) with constant acceleration a₀. Ignore gravity inside the spacecraft. Assume Ω, B₀, R, a₀, q, and m are all known positive constants, and the chamber radius is much larger than the maximum r reached by the particle. The particle is constrained to move only in the xy-plane (z = 0) by a mechanical guide. Neglect friction and air resistance.
+
+    Topic Tags: ['non-inertial frames', 'rotating reference frames', 'electromagnetism', 'coupled dynamics', 'advanced mechanics']
+
+--------------
+
+    [8] Generated Question: A uniform solid disc of mass M and radius R is mounted on a frictionless vertical axle and initially spins with angular velocity ω0. A small particle of mass m (with m << M), traveling horizontally with velocity v0, strikes and sticks to the rim of the disc at a point on its edge (assume the collision is perfectly inelastic). Simultaneously, the laboratory is mounted on a rotating platform rotating at angular speed Ω (about the same vertical axis as the disc, but in the opposite direction as ω0). An observer on the rotating platform attempts to analyze the resulting post-collision motion of the particle-disc system.
+    (a) Find the final angular velocity ωf of the combined system (disc + particle), as measured in the inertial (lab) frame, immediately after the collision.
+    (b) Express the fictitious (pseudo) forces acting on the particle immediately after it adheres to the rim, as observed in the rotating frame, and compute the magnitude and direction of the total pseudo force vector just after collision.
+    (c) At the instant after collision, compute the energy loss due to the inelastic nature of the collision, comparing the total kinetic energy before and after, as measured in the laboratory frame. (Assume all rotations and velocities are about/along the same axis, and neglect air friction.)
+
+    Topic Tags: ['rotation', 'inertial and non-inertial frames', 'conservation of angular momentum', 'pseudo forces', 'collisions', 'graduate mechanics']
+
+--------------
+
+    [9] Generated Question: A perfectly insulated piston of mass m rests on top of a cylindrical container of height h and cross-sectional area A, containing an ideal monoatomic gas with N molecules and initial temperature T_0. The external pressure is P_ext. Suddenly, a small relativistic particle of mass m_0 (rest mass) and speed v_0 (with v_0 ≈ 0.8c) is launched vertically downward and completely embeds itself in the piston, after which the combined piston-particle system momentarily comes to rest. During this perfectly inelastic collision, assume the piston does not move appreciably. Immediately after, the system is allowed to evolve quasi-statically and reversibly, such that the gas returns to its original temperature T_0, while the piston rises to a new equilibrium height h_f. Neglect heat losses and friction. (1) Find the final equilibrium height h_f of the piston in terms of m, m_0, N, T_0, v_0, A, P_ext, and fundamental constants. (2) Derive the total increase in internal energy of the gas after the collision, explicitly accounting for all forms of energy transfer. (3) Explain whether any heat exchange occurs during the process and justify quantitatively how the system remains consistent with the combined first law of thermodynamics under these conditions.
+
+    Topic Tags: ['relativistic momentum', 'adiabatic process', 'mechanics and thermodynamics', 'first law of thermodynamics', 'conservation of energy']
+
+--------------
+
+    [10] A thin uniform circular ring of radius R and mass M is free to rotate without friction about its fixed vertical central axis z. A small bead of rest mass m (m not negligibly small) is rigidly attached to the rim so that it co-rotates with the ring. The combined system (ring + bead) is initially at rest at laboratory time t = 0. From that instant and until t = T a motor mounted on the axle delivers a time–dependent torque\n\n            τ(t) = τ₀\,(1 − t/T) ,           0 ≤ t ≤ T ,\n\nwhere τ₀ and T are positive constants.  No external torques act other than τ(t).  Up to the instant of its release the bead cannot slide with respect to the ring, so the total moment of inertia is\n\n            I = (M + m) R².\n\nExactly at t = T/2 the bead is released instantaneously and subsequently moves freely in a straight line that is tangential to the rim at the release point; after release it experiences no forces.  Ignore gravity and any interaction between bead and ring after release, and treat the bead relativistically once it is free.  The ring continues to rotate under the same torque τ(t) for t > T/2, but for the purpose of this problem you need only consider the interval 0 ≤ t ≤ T/2.  The speed of light is c.  (i) Unless you can prove otherwise, assume the attachment mechanism does not itself add or remove energy.  (ii) Subtle point: the motor torque is applied only to the ring, yet before release both ring and bead gain kinetic energy; account for this correctly.\n\nAnswer the following, expressing every result symbolically in terms of the given parameters (τ₀, T, R, M, m, c):
+
+    Topic Tags: ['relativistic momentum and kinetic energy', 'rotational motion with non-uniform torque', 'mechanics', 'special relativity']
+
+--------------
+
+    [11] Generated Question: Inside a sealed, perfectly thermally insulated elevator car of mass M (not needed numerically), a vertical cylinder of uniform cross-sectional area A is rigidly attached to the floor. The cylinder contains n moles of an ideal monatomic gas (ratio of heat capacities γ) and is closed at the top by a frictionless, mass m_p, perfectly conducting, thin piston whose upper face is in contact with vacuum (negligible external pressure). At t = 0 the elevator is stationary with respect to Earth, and the gas–piston system has reached mechanical and thermal equilibrium at temperature T_0, piston height h_0 (measured from the bottom of the cylinder), and pressure P_0.
+
+    At t = 0^+, the elevator starts to move upward with a constant proper acceleration a (|a| ≪ c so relativistic effects can be neglected). During the subsequent motion the cylinder walls prevent any heat exchange with the surroundings, and the process within the gas can be treated as quasi-static.
+    Assume g is the local constant magnitude of the Earth’s gravitational field and that the gas itself has negligible weight compared with the piston. Ignore any heat capacity of the piston and cylinder walls.
+    Answer the following questions symbolically. State clearly any additional assumptions you must invoke.
+    (Unless explicitly required, do NOT insert numerical values.)
+
+    Topic Tags: ['non-inertial mechanics', 'thermodynamics', 'adiabatic processes', 'graduate-level']
+
+--------------
+
+    [12] Generated Question: A beam of positively charged relativistic mesons (charge q, rest mass m_0, proper mean lifetime \tau_0) is injected at x = 0 with 3–momentum p_0\hat{i} (|p_0| \gg m_0 c) and negligible transverse extent. In the region 0 \le x \le L there is a static, non-uniform magnetic field
+    B(x) = B_0 \bigl(1 + \alpha x/L\bigr) \hat{k},        |\alpha| < 1,
+    and no electric field. Outside this region the field is zero. Gravity and radiation reaction are negligible.
+    Because the field is everywhere parallel to \hat{k} and the incoming momentum is along \hat{i}, the meson’s speed magnitude can be taken constant and equal to v \simeq c.  Let \theta(x) be the instantaneous (small) angle between the particle’s momentum and the +x direction as it moves through the field.
+    Assume throughout that (i) |\theta| \ll 1, (ii) \varepsilon \equiv q B_0 L / p_0 \ll 1, and keep terms only to second order in \varepsilon.  Neglect any spread in initial momenta.      
+
+    (a) Starting from the relativistic Lorentz force, obtain a differential equation for \theta(x) and solve it to find an explicit expression for \theta(x) in terms of q, B_0, p_0, L, \alpha, and x.
+    (b) Using the result of (a) and the small-angle approximation, derive an expression, correct to \mathcal{O}(\varepsilon^2), for the time of flight T(L) that a meson needs to cross the magnetic region (from x = 0 to x = L).
+    (c) Let \gamma = \sqrt{1 + (p_0/m_0 c)^2}.  Using special-relativistic time dilation, compute the probability P that a meson survives (i.e., has not yet decayed) when it exits at x = L.  Keep terms up to \mathcal{O}(\varepsilon^2) in the exponent and write P explicitly in symbolic form.
+
+    Topic Tags: ['electromagnetism', 'special_relativity', 'charged_particle_in_magnetic_field', 'time_dilation', 'graduate_level_physics']
+
+--------------
+------------------
+--------------
+
+    [a] Generated Question: A beam of positively charged relativistic mesons (charge q, rest mass m_0, proper mean lifetime \tau_0) is injected at x = 0 with 3–momentum p_0\hat{i} (|p_0| \gg m_0 c) and negligible transverse extent. In the region 0 \le x \le L there is a static, non-uniform magnetic field
+    B(x) = B_0 \bigl(1 + \alpha x/L\bigr) \hat{k},        |\alpha| < 1,
+    and no electric field. Outside this region the field is zero. Gravity and radiation reaction are negligible.
+    Because the field is everywhere parallel to \hat{k} and the incoming momentum is along \hat{i}, the meson’s speed magnitude can be taken constant and equal to v \simeq c.  Let \theta(x) be the instantaneous (small) angle between the particle’s momentum and the +x direction as it moves through the field.
+    Assume throughout that (i) |\theta| \ll 1, (ii) \varepsilon \equiv q B_0 L / p_0 \ll 1, and keep terms only to second order in \varepsilon.  Neglect any spread in initial momenta.      
+
+    (a) Starting from the relativistic Lorentz force, obtain a differential equation for \theta(x) and solve it to find an explicit expression for \theta(x) in terms of q, B_0, p_0, L, \alpha, and x.
+    (b) Using the result of (a) and the small-angle approximation, derive an expression, correct to \mathcal{O}(\varepsilon^2), for the time of flight T(L) that a meson needs to cross the magnetic region (from x = 0 to x = L).
+    (c) Let \gamma = \sqrt{1 + (p_0/m_0 c)^2}.  Using special-relativistic time dilation, compute the probability P that a meson survives (i.e., has not yet decayed) when it exits at x = L.  Keep terms up to \mathcal{O}(\varepsilon^2) in the exponent and write P explicitly in symbolic form.
+
+--------------
+
+    [b] Generated Question: A solid, uniform cylinder of height h = 0.40 m and radius R = 0.15 m is made from an aluminum alloy with mass M = 19.8 kg and initial temperature T₀ = 293 K (20°C). The cylinder is fully immersed and floats upright (axis vertical) in a large tank of water at temperature T₀. The densities at T₀ are: ρ_al(T₀) = 2700 kg/m³ (aluminum, at 20°C) and ρ_w(T₀) = 998 kg/m³ (water, at 20°C). The coefficient of volumetric thermal expansion for aluminum is β = 7.2 × 10⁻⁵ K⁻¹. The coefficient of volumetric thermal expansion for water near room temperature is γ = 2.1 × 10⁻⁴ K⁻¹. The cylinder is slowly and uniformly heated (with perfect thermal contact) so that its temperature rises; the water is simultaneously heated at the same rate, so their temperatures always remain equal (at temperature T). Assume that the aluminum cylinder's mass remains constant, only its volume changes with temperature, and the density of both aluminum and water vary with temperature solely due to isotropic thermal expansion. Neglect evaporation, convection, or surface tension. Atmospheric pressure is constant and does not affect your answer.
+    (i) Derive the temperature T₁ (in K, above T₀) at which the aluminum cylinder will just become neutrally buoyant and start to sink.
+    (ii) Re-express your answer in terms of the cylinder's parameters (M, h, R), the coefficients of expansion, and the initial densities.
+    (iii) Using the values above, calculate numerically T₁ to the correct number of significant figures. Is it physically feasible for the cylinder to sink before water boils (T = 373 K)?
+
+-----gemini----
+
+    [Cycle 1]
+
+    Gemini2.5 Answer: `Ω_min = 16.52 rad/s`
+    Gemini2.0 Answer: `Ω_min = 10.03 rad/s`
+    Similarity Decision: different  (Score: 0.1)
+
+    Final Refined Question (as models disagree):
+    ```json
+    {
+    "question": "\\documentclass{article}\n\\usepackage{amsmath,amssymb,physics}\n\\usepackage{siunitx}\n\n\\begin{document}\n\nConsider a perfectly rigid, circular wire loop of radius $R = \\SI{0.5}{m}$ fixed in the horizontal $xy$-plane, centered at the origin of an inertial lab frame $(x,y,z)$. The loop rotates about the vertical $z$-axis with a constant angular speed $\\Omega$.\n\nA point-like bead of mass $m = \\SI{10}{mg}$ and net charge $q = \\SI{10}{\\micro C}$ is threaded onto the loop. The bead also possesses a permanent electric dipole moment $\\vec{p}$, rigidly fixed to the bead. Its orientation is such that it is always aligned with the instantaneous tangential direction of the circular loop at the bead's position. At the specific position $(x=R, y=0, z=0)$ in the lab frame, its dipole moment is $\\vec{p} = p_0 \\hat{j}$, where $p_0 = \\SI{10^{-3}}{C\\cdot m}$ and $\\hat{j}$ is the lab frame unit vector in the $y$-direction. As the loop rotates with constant angular speed $\\Omega$, the bead and its dipole moment rotate along with the loop, maintaining this relative orientation.\n\nThe entire system is immersed in a complex, static electromagnetic field, specified in the lab frame:\n\\begin{enumerate}\n    \\item A non-uniform magnetic field $\\vec{B}(\\vec{r}) = B_0 \\left( \\frac{y}{R} \\hat{i} - \\frac{x}{R} \\hat{j} + \\frac{r^2}{R^2} \\hat{k} \\right)$, where $r = \\sqrt{x^2+y^2}$ is the radial distance from the $z$-axis, and $B_0 = \\SI{10}{mT}$.\n    \\item A non-uniform electric field $\\vec{E}(\\vec{r}) = E_0 \\left( \\frac{x}{R} \\hat{i} + \\frac{y}{R} \\hat{j} + \\frac{z}{R} \\hat{k} \\right)$, where $E_0 = \\SI{50}{V/m}$.\n\\end{enumerate}\n\nStatic friction acts between the bead and the wire with a coefficient $\\mu_s = 0.3$. The acceleration due to gravity is $g = \\SI{9.81}{m/s^2}$.\n\nDetermine the minimum angular speed $\\Omega_{\\text{min}}$ (in radians per second) at which the bead, initially placed at rest relative to the loop at the position $(x=R, y=0, z=0)$ in the lab frame, can remain stationary relative to the loop. Express your answer as a positive numeric value rounded to two decimal places.\n\n\\end{document}",
+    "topic_tags": [
+        "Classical Mechanics",
+        "Electrodynamics",
+        "Non-Inertial Frames",
+        "Forces and Motion",
+        "Static Equilibrium",
+        "Magnetostatics",
+        "Electrostatics"
+    ]
+    }
+    gemini 2.5 pro ans: 258 rad/s
+    o3 ans: 258 rad/s

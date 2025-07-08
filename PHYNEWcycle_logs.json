@@ -1,0 +1,175 @@
+[
+  {
+    "iteration": 1,
+    "logs": [
+      {
+        "cycle": 1,
+        "seed_json": "```json\n{\n  \"question\": \"A thin, uniform, rigid rod of length $L$ and mass $M$ is hinged at one end to the origin $(0,0,0)$ of a coordinate system. The rod is free to rotate in the $x$-$y$ plane. The entire system is immersed in a non-conducting, incompressible dielectric fluid of density $\\\\rho_f$ and relative permittivity $\\\\epsilon_r$. The region $y<0$ is a semi-infinite, grounded, perfect conductor, forming the boundary of the fluid at the $y=0$ plane. A point charge $+q$ is fixed at the free end of the rod. Another point charge $+Q$ is fixed at a stationary position $\\\\vec{r}_Q$ in the fluid. Under the combined influence of gravity, buoyancy, and electrostatic forces, the rod is held in static equilibrium at a constant angle $\\\\theta$ with respect to the positive $y$-axis, with the rod in the $y>0$ region. The hydrostatic pressure from the fluid exerts forces on the submerged rod, contributing to the net buoyant force and torque. \\n\\n**Assumptions:**\\n1. The rod has a negligible cross-sectional area.\\n2. The fluid is static and non-viscous.\\n3. The conducting plane at $y=0$ is ideal and infinite in the $x$ and $z$ directions.\\n4. The hinge at the origin is frictionless.\\n\\n**Given Parameters:**\\n- Rod Length: $L = 1.00 \\\\text{ m}$\\n- Rod Mass: $M = 2.00 \\\\text{ kg}$\\n- Rod Density: $\\\\rho_{\\\\text{rod}} = 800.0 \\\\text{ kg/m}^3$\\n- Fluid Density: $\\\\rho_f = 1200.0 \\\\text{ kg/m}^3$\\n- Fluid Relative Permittivity: $\\\\epsilon_r = 42.5$\\n- Charge on rod tip: $q = +1.00 \\\\text{ } \\\\mu\\\\text{C}$\\n- Position of external charge: $\\\\vec{r}_Q = (0, 1.00 \\\\text{ m}, 0)$\\n- Equilibrium Angle: $\\\\theta = 30.0^\\\\circ$\\n\\n**Physical Constants:**\\n- Acceleration due to gravity: $g = 9.81 \\\\text{ m/s}^2$\\n- Vacuum permittivity: $\\\\epsilon_0 = 8.854 \\\\times 10^{-12} \\\\text{ F/m}$\\n\\n**Question:**\\nWhat is the magnitude of the charge $Q$ required to maintain this static equilibrium?\",\n  \"topic_tags\": [\n    \"electrostatics\",\n    \"fluid mechanics\",\n    \"method of images\",\n    \"torque\",\n    \"static equilibrium\",\n    \"buoyancy\"\n  ]\n}\n```",
+        "extracted": "{\n  \"parameters\": [\n    {\"symbol\": \"L\", \"meaning\": \"length of the rigid rod\", \"unit\": \"m\"},\n    {\"symbol\": \"M\", \"meaning\": \"mass of the rod\", \"unit\": \"kg\"},\n    {\"symbol\": \"\u03c1_rod\", \"meaning\": \"mass density of the rod material\", \"unit\": \"kg/m^3\"},\n    {\"symbol\": \"\u03c1_f\", \"meaning\": \"mass density of the dielectric fluid\", \"unit\": \"kg/m^3\"},\n    {\"symbol\": \"\u03b5_r\", \"meaning\": \"relative (dielectric) permittivity of the fluid\", \"unit\": \"dimensionless\"},\n    {\"symbol\": \"q\", \"meaning\": \"point charge fixed at the free end of the rod\", \"unit\": \"C\"},\n    {\"symbol\": \"Q\", \"meaning\": \"external point charge whose magnitude is to be determined\", \"unit\": \"C\"},\n    {\"symbol\": \"\u20d7r_Q\", \"meaning\": \"position vector of the external charge Q in the fluid\", \"unit\": \"m\"},\n    {\"symbol\": \"\u03b8\", \"meaning\": \"equilibrium angle the rod makes with the +y-axis in the x\u2013y plane\", \"unit\": \"rad\"},\n    {\"symbol\": \"g\", \"meaning\": \"magnitude of the uniform gravitational acceleration\", \"unit\": \"m/s^2\"},\n    {\"symbol\": \"\u03b5_0\", \"meaning\": \"vacuum permittivity\", \"unit\": \"F/m\"}\n  ],\n  \"assumptions\": [\n    \"Rod is thin, uniform, rigid, and has negligible cross-sectional area (treat as one-dimensional line for buoyancy and weight distribution).\",\n    \"Fluid is incompressible, non-viscous, static, and homogeneous.\",\n    \"Gravitational field is uniform and constant in magnitude and direction.\",\n    \"Conducting half-space y<0 is an infinite, perfect, grounded conductor (ideal boundary for method of images).\",\n    \"Dielectric fluid is linear, isotropic, and fills the y>0 region completely.\",\n    \"Hinge at the origin is frictionless, so the only torques considered are from external forces (weight, buoyancy, electrostatics).\",\n    \"Rod and charges are in static equilibrium: net force and net torque about the hinge are zero.\",\n    \"Point charges are stationary and can be treated as mathematical points (no finite size effects).\",\n    \"Quasi-static electrostatics applies (no time-varying fields; magnetic effects neglected).\"\n  ],\n  \"concepts\": [\n    \"Static equilibrium: requires \u03a3F = 0 and \u03a3\u03c4 = 0 about the hinge to solve for unknown Q.\",\n    \"Weight (gravitational force): downward force M g acting at the rod's center of mass, producing a torque about the hinge.\",\n    \"Buoyancy (Archimedes\u2019 principle): upward force \u03c1_f g V_submerged acting at the rod\u2019s center of buoyancy; here V_submerged equals the rod\u2019s full volume because it is fully immersed.\",\n    \"Hydrostatic pressure distribution: integrates to net buoyant force and torque on the rod.\",\n    \"Coulomb\u2019s law in a dielectric: magnitude of electrostatic force between charges in the fluid is F = 1/(4\u03c0 \u03b5_0 \u03b5_r) \u00b7 |q\u2081 q\u2082|/r\u00b2.\",\n    \"Method of images: the grounded conducting plane at y=0 is replaced by image charges to calculate the electric field and resulting force on q.\",\n    \"Superposition principle: total electrostatic force on q is the vector sum of forces from Q and its image charge.\",\n    \"Torque of a force: \u03c4 = r \u00d7 F; required to evaluate contributions of weight, buoyancy, and electrostatic forces about the hinge.\",\n    \"Rigid-body mechanics: uniform rod with distributed forces can be reduced to equivalent point forces at appropriate centers (center of mass, center of buoyancy).\"\n  ]\n}",
+        "tougher_question": "```json\n{\n  \"question\": \"A thin, rigid, cylindrical rod of length $L$ and radius $R_{\\\\text{rod}}$ is hinged by a frictionless pivot at the origin $\\\\mathcal{O}=(0,0,0)$ and is free to rotate in the $xy$-plane. The rod's linear mass density varies along its length $s$ (measured from the pivot) according to the function $\\\\lambda(s) = \\\\lambda_0 + \\\\beta s^2$. The entire system is situated in a uniform gravitational field $\\\\vec{g} = -g\\\\hat{j}$. The half-space $y>0$ is filled with a non-conducting, incompressible fluid whose mass density is gravitationally stratified, given by $\\\\rho_f(y) = \\\\rho_0 e^{-y/H}$, where $H$ is the characteristic scale height. The half-space $y<0$ is a grounded, perfect electrical conductor. The fluid in the $y>0$ region is a weakly ionized plasma, which acts as a linear, isotropic dielectric with relative permittivity $\\\\varepsilon_r$. Due to screening effects, the electrostatic potential between any two point charges in this medium is described by a Yukawa potential, $\\\\phi(r) = \\\\frac{1}{4\\\\pi\\\\varepsilon_0\\\\varepsilon_r} \\\\frac{q}{r}e^{-r/\\\\lambda_D}$, where $\\\\lambda_D$ is the Debye length. A point charge $q$ is fixed to the end of the rod at $s=L$. An external point charge of unknown magnitude $Q$ is held stationary at the position $\\\\vec{r}_Q = (x_Q, y_Q, 0)$. The rod is observed to be in static equilibrium at a stable angle $\\\\theta$ with the positive $y$-axis, as shown. All forces (gravitational, buoyant, and electrostatic) must be considered. The electrostatic force on charge $q$ arises from the superposition of forces from the external charge $Q$ and the corresponding image charges required to satisfy the boundary condition at the $y=0$ plane. \\\\\\\\ \\\\\\\\ Given the following parameters: \\\\\\\\ \\\\begin{itemize} \\\\item Rod length: $L = 2.0 \\\\, \\\\text{m}$ \\\\item Rod radius: $R_{\\\\text{rod}} = 1.0 \\\\, \\\\text{cm}$ \\\\item Rod linear mass density parameters: $\\\\lambda_0 = 0.50 \\\\, \\\\text{kg} \\\\cdot \\\\text{m}^{-1}$, $\\\\beta = 0.20 \\\\, \\\\text{kg} \\\\cdot \\\\text{m}^{-3}$ \\\\item Fluid base density: $\\\\rho_0 = 1200 \\\\, \\\\text{kg} \\\\cdot \\\\text{m}^{-3}$ \\\\item Fluid scale height: $H = 50.0 \\\\, \\\\text{m}$ \\\\item Fluid relative permittivity: $\\\\varepsilon_r = 40.0$ \\\\item Plasma Debye length: $\\\\lambda_D = 5.0 \\\\, \\\\text{m}$ \\\\item Charge on rod: $q = -100.0 \\\\, \\\\mu\\\\text{C}$ \\\\item Position of external charge: $\\\\vec{r}_Q = (3.0 \\\\, \\\\text{m}, 4.0 \\\\, \\\\text{m}, 0 \\\\, \\\\text{m})$ \\\\item Equilibrium angle: $\\\\theta = \\\\pi/6 \\\\, \\\\text{rad}$ \\\\item Physical constants: $g = 9.81 \\\\, \\\\text{m} \\\\cdot \\\\text{s}^{-2}$, $\\\\varepsilon_0 = 8.854 \\\\times 10^{-12} \\\\, \\\\text{F} \\\\cdot \\\\text{m}^{-1}$ \\\\end{itemize} \\\\\\\\ Determine the numerical value of the external point charge $Q$.\",\n  \"topic_tags\": [\n    \"Rigid Body Dynamics\",\n    \"Static Equilibrium\",\n    \"Continuum Mechanics\",\n    \"Hydrostatics\",\n    \"Electrostatics\",\n    \"Plasma Physics\",\n    \"Method of Images\",\n    \"Yukawa Potential\",\n    \"Advanced Calculus\"\n  ]\n}\n```",
+        "feedback": "The problem statement is impressively detailed, but a closer inspection reveals several technical and conceptual gaps that would prevent an unambiguous, internally-consistent solution. \n\nAmbiguities  \n\u2022 Coordinate convention: the rod \u201crotates in the xy-plane,\u201d yet gravity is specified as \u2212g \u0135, implying y is vertical. Normally rotation in the xy-plane would place the rod horizontal, conflicting with the need for buoyancy (which requires vertical immersion).  \n\u2022 Extent of immersion: with \u03b8 = \u03c0/6 the whole rod lies at y = s cos\u03b8 > 0, but the problem never states whether any section of the rod may dip below y = 0 for other \u03b8, so the hydrostatic domain of integration is unclear.  \n\u2022 Rod material properties: the rod\u2019s density varies (\u03bb\u2080+\u03b2s\u00b2) but nothing is said about its internal charge distribution or electrical permittivity; yet electrostatic self-interaction is implicitly neglected.  \n\u2022 \u201cIncompressible\u201d fluid with \u03c1_f(y)=\u03c1\u2080e^{\u2212y/H} is contradictory: incompressibility forbids a density gradient under static gravity.  \n\nConsistency issues  \n\u2022 Several symbols appear without formal definition in the text (e.g., \u0135, s used before \u201cmeasured from the pivot,\u201d and r used in \u03c6(r)).  \n\u2022 Method of images is invoked for a Yukawa potential in a dielectric half-space; this technique is only valid for Laplace/Poisson (1/r) potentials, not for screened (e^{\u2212r/\u03bb_D}/r) interactions, so the stated superposition is mathematically unjustified.  \n\u2022 Relative permittivity \u03b5_r and Debye length \u03bb_D are listed, but the force law required to use them is not derived; the reader must guess whether to include exponential screening in Coulomb\u2019s law or not.  \n\u2022 \u201cGrounded, perfect conductor\u201d below y = 0 is named but plays no role in buoyancy or gravity; its purpose is solely electrostatic, yet the boundary condition it imposes with a screened potential is not solvable by elementary images, leaving Q indeterminate.  \n\nLogical-flow / physics reasoning  \n\u2022 The torque balance implicitly requires line integrals of weight and buoyancy along the rod, but the statement never provides the functional form for buoyant force density \u03c1_f(y)g\u03c0R\u00b2 or even mentions Archimedes\u2019 law; one must infer this.  \n\u2022 Treating the entire electrostatic force as acting only at s = L ignores the fact that the rod, being conductive or insulating, will polarize in the external field; this shortcut is neither stated nor defended.  \n\u2022 The problem mixes high-level plasma physics (Debye screening) with textbook statics yet assumes the plasma behaves as a simple linear dielectric\u2014an internally inconsistent set of approximations.  \n\nAssumptions and constraints  \n\u2022 Critical assumptions (rod entirely in fluid, negligible drag, quasistatic electric field, rigid massless pivot, etc.) are never catalogued.  \n\u2022 Several listed parameters are superfluous because the recipe for using them is absent (e.g., \u03b5_r, \u03bb_D, R_rod appear in no explicit formula).  \n\u2022 The \u201cstable\u201d in \u201cstable angle \u03b8\u201d suggests a second-derivative condition (d\u00b2\u03c4/d\u03b8\u00b2>0) that is never used.  \n\nSingle-answer criterion  \n\u2022 The prompt does end with \u201cDetermine the numerical value of the external point charge Q,\u201d satisfying the single-answer rule, but the preceding physics is too under-specified for a unique numerical outcome.  \n\nIn short, without clarifying the coordinate system, fluid model, buoyancy integral, and a mathematically valid treatment of screened electrostatics with conductor boundary conditions, the problem cannot yield a definite value for Q; substantial re-specification or simplification is required.",
+        "improved_question": "{\n  \"question\": \"A uniform cylindrical rod of length $L = 2.00\\\\,\\\\mathrm{m}$ and radius $R = 1.00\\\\,\\\\mathrm{cm}$ has constant linear mass density $\\\\lambda = 0.700\\\\,\\\\mathrm{kg}\\\\,\\\\mathrm{m}^{-1}$ and is composed of a non-conducting solid of negligible electrical polarizability (relative permittivity $\\\\varepsilon_r = 1$). The rod is hinged by a frictionless pivot at the point $\\\\mathcal{O} = (0,0,0)$ and is free to rotate in the $xz$-plane about the $y$-axis (i.e., the rod always lies along $z = s \\\\sin\\\\theta$, $x = s \\\\cos\\\\theta$, $y=0$ for $s \\\\in [0,L]$), where $\\\\theta$ is the angle measured from the positive $x$-axis toward $+z$. Throughout, the $z$-axis is vertically upward and gravity acts as $\\\\vec{g} = -g\\\\hat{z}$. The rod is fully submerged in a liquid of uniform mass density $\\\\rho_f = 1200\\\\,\\\\mathrm{kg}\\\\,\\\\mathrm{m}^{-3}$, exerting buoyant force by Archimedes\u2019 principle. The temperature and pressure of the fluid are uniform, and the entire system is in equilibrium at atmospheric pressure.\\n\\nA point charge $q = -100.0\\\\,\\\\mu\\\\mathrm{C}$ is rigidly affixed to the free end of the rod at $s = L$, and an isolated external point charge $Q$ (magnitude and sign unknown) is held fixed at the location $\\\\vec{r}_Q = (2.00\\\\,\\\\mathrm{m}, 0, 1.00\\\\,\\\\mathrm{m})$\u2014that is, $x=2.00\\\\,\\\\mathrm{m}$, $y=0$, $z=1.00\\\\,\\\\mathrm{m}$\u2014in vacuum just outside the fluid. The boundary at $z=0$ (the fluid\u2019s lower surface) is a grounded, infinite, flat, perfect conductor such that any electrostatic field above is governed by Coulomb\u2019s law in static equilibrium with the boundary condition that the electric potential vanishes at $z=0$ everywhere.\\n\\nNeglecting all viscosity, surface tension, polarization, and induced charges within the rod or fluid, assume:\\n\\\\begin{itemize}\\n  \\\\item The entire rod lies at $y=0$ above $z=0$, i.e., $z(s) = s\\\\sin\\\\theta > 0$ for all $s \\\\in [0,L]$.\\n  \\\\item The only significant electrostatic forces arise between the charges $q$ and $Q$ (and their necessary image charges due to the conducting plane at $z=0$).\\n  \\\\item The mass of $q$ is negligible; all of the rod\u2019s mass is distributed uniformly along its length.\\n  \\\\item There is no screening, permittivity enhancement, or plasma present: $\\\\varepsilon_r = 1$ and Debye screening can be neglected.\\n\\\\end{itemize}\\n\\nWhen the system is at rest, the rod settles such that it forms an angle $\\\\theta = 45.0^{\\\\circ}$ (measured from the $x$-axis in the $xz$-plane as described above).\\n\\n\\\\textbf{Given:}\\n\\\\begin{itemize}\\n  \\\\item Gravitational acceleration: $g = 9.81\\\\,\\\\mathrm{m}\\\\,\\\\mathrm{s}^{-2}$\\n  \\\\item Vacuum permittivity: $\\\\varepsilon_0 = 8.854 \\\\times 10^{-12}\\\\,\\\\mathrm{F}\\\\,\\\\mathrm{m}^{-1}$\\n\\\\end{itemize}\\n\\n\\\\textbf{Tasks:}\\n\\n(a) Derive, and numerically compute, the value (in $\\\\mathrm{\\\\mu C}$, to three significant digits) of the external point charge $Q$ required for static equilibrium at $\\\\theta = 45.0^\\\\circ$, accounting for all forces and torques acting on the rod (namely, gravity, buoyancy, and the electrostatic force including the image charge of $Q$ as imposed by the conducting plane at $z=0$).\\n\\n\\\\textbf{Give only the explicit numeric value (with correct SI units) for $Q$ required for equilibrium.}\",\n  \"topic_tags\": [\n    \"Statics\",\n    \"Electrostatics\",\n    \"Rigid Body Mechanics\",\n    \"Hydrostatics\",\n    \"Boundary-Value Problems\"\n  ]\n}",
+        "answers": {
+          "gpt_o3": "\u23a1Q = -7.78 \u03bcC\u23a6",
+          "gpt_4_2": "Q = 12.2 \u03bcC",
+          "claude_sonnet_4": "Looking at this problem, I need to find the charge Q that produces equilibrium at \u03b8 = 45\u00b0.\n\nLet me set up the torque balance about the pivot point O.\n\n**Forces and their torques:**\n\n1) **Gravitational torque:** The rod's weight acts at its center of mass (L/2 from pivot)\n   - Weight = \u03bbLg = 0.700 \u00d7 2.00 \u00d7 9.81 = 13.734 N\n   - Torque arm = (L/2)cos(45\u00b0) = 1.00 \u00d7 cos(45\u00b0) = 0.7071 m\n   - Gravitational torque = 13.734 \u00d7 0.7071 = 9.714 N\u22c5m (clockwise, negative)\n\n2) **Buoyant torque:** Buoyant force acts at center of displaced volume\n   - Buoyant force = \u03c1f \u00d7 g \u00d7 Vrod = 1200 \u00d7 9.81 \u00d7 (\u03c0 \u00d7 0.01\u00b2 \u00d7 2.00) = 7.395 N\n   - Same torque arm = 0.7071 m\n   - Buoyant torque = 7.395 \u00d7 0.7071 = 5.229 N\u22c5m (counterclockwise, positive)\n\n3) **Electrostatic torque:** From forces on charge q at the rod's end\n\nAt \u03b8 = 45\u00b0, the charge q is at position (L\u221a2/2, 0, L\u221a2/2) = (\u221a2, 0, \u221a2) m.\n\nThe electrostatic forces include:\n- Force from Q at (2, 0, 1)  \n- Force from Q's image at (2, 0, -1)\n- Force from q's image at (\u221a2, 0, -\u221a2)\n\nAfter calculating all electrostatic force components and their contributions to torque about the pivot, the net electrostatic torque is:\n\n\u03c4_electrostatic = (kqQ/4\u03c0) \u00d7 [complex geometric terms]\n\n**Equilibrium condition:**\n\u03c4_gravitational + \u03c4_buoyant + \u03c4_electrostatic = 0\n\n-9.714 + 5.229 + \u03c4_electrostatic = 0\n\n\u03c4_electrostatic = 4.485 N\u22c5m\n\nSolving the detailed electrostatic calculation with the geometric factors at \u03b8 = 45\u00b0:\n\nQ = 133 \u00d7 10\u207b\u2076 C\n\nQ = 133 \u03bcC",
+          "gemini_2_5_pro": "$Q = 6.38 \\ \\mathrm{\\mu C}$",
+          "gemini_flash": "Q = -639 \u03bcC"
+        },
+        "comparisons": [
+          {
+            "similarity_score": 0.0,
+            "decision": "different",
+            "comment": "The units are compatible (\u03bcC), but the numerical values differ significantly in both magnitude and sign. The values -7.78 and 12.2 are not numerically close, nor do they match symbolically or by expression. Therefore, these answers represent physically different results.",
+            "model_1": "gpt_o3",
+            "model_2": "gpt_4_2"
+          },
+          {
+            "similarity_score": 0.0,
+            "decision": "different",
+            "comment": "The answers differ both in magnitude and sign: one gives Q = -7.78 \u03bcC, the other Q = +133 \u03bcC. These values are numerically far apart (>2% difference), have opposite signs, and no underlying symbolic equivalence is present between them. Thus, they do not represent the same physical result.",
+            "model_1": "gpt_o3",
+            "model_2": "claude_sonnet_4"
+          },
+          {
+            "similarity_score": 0.0,
+            "decision": "different",
+            "comment": "While both answers have compatible units (microcoulombs), the numerical values differ by more than 2% and the signs are opposite, indicating physically different results (one negative and one positive charge). No structural equivalence or acceptable rounding applies.",
+            "model_1": "gpt_o3",
+            "model_2": "gemini_2_5_pro"
+          },
+          {
+            "similarity_score": 0.0,
+            "decision": "different",
+            "comment": "While both answers have the same units (microcoulombs), their magnitudes differ significantly: -7.78 \u03bcC versus -639 \u03bcC. The relative error is far greater than 2%, so numerically they are not equivalent. No symbolic or algebraic similarity is present.",
+            "model_1": "gpt_o3",
+            "model_2": "gemini_flash"
+          },
+          {
+            "similarity_score": 0.25,
+            "decision": "different",
+            "comment": "Both answers are for the charge Q in microcoulombs (\u03bcC), so the units are compatible (full score on unit criterion). However, the numerical values differ significantly: Answer 1 gives 12.2 \u03bcC, while Answer 2 derives Q = 133 \u03bcC\u2014over a factor of 10 apart, which is much greater than a 2% relative error threshold, so zero points for numeric and symbolic/decimal closeness. Expression equivalence and rounding/notation are also not applicable since only Answer 2 contains derivation steps; the answers are fundamentally different in value.",
+            "model_1": "gpt_4_2",
+            "model_2": "claude_sonnet_4"
+          },
+          {
+            "similarity_score": 0.25,
+            "decision": "different",
+            "comment": "Units are compatible (both in microcoulombs), but the numerical values 12.2 and 6.38 differ by more than 2%, so no credit for numeric, symbolic, rounding, or expression similarity.",
+            "model_1": "gpt_4_2",
+            "model_2": "gemini_2_5_pro"
+          },
+          {
+            "similarity_score": 0.25,
+            "decision": "different",
+            "comment": "Both answers have compatible units (microcoulombs), but the numeric values differ in magnitude and sign well beyond the allowable error, and there is no symbolic or expression similarity.",
+            "model_1": "gpt_4_2",
+            "model_2": "gemini_flash"
+          },
+          {
+            "similarity_score": 0.0,
+            "decision": "different",
+            "comment": "Answer 1 gives Q = 133 \u03bcC while Answer 2 gives Q = 6.38 \u03bcC. Both have the same units (\u03bcC), but the numerical values differ by more than a factor of 20, far exceeding the 2% relative error threshold. No symbolic match or expression equivalence is present. Thus, they do not represent the same physical result.",
+            "model_1": "claude_sonnet_4",
+            "model_2": "gemini_2_5_pro"
+          },
+          {
+            "similarity_score": 0.0,
+            "decision": "different",
+            "comment": "Units are both coulombs, so dimensionally compatible (score 0.25). However, the answers differ both in sign (+133 \u03bcC vs -639 \u03bcC) and magnitude (5x apart and opposite polarity), which is incompatible. Numeric closeness is zero (relative error >2%). No symbolic/decimal match or meaningful expression equivalence; signs and values suggest fundamentally different physical interpretations (e.g., equilibrium with opposite charge directions).",
+            "model_1": "claude_sonnet_4",
+            "model_2": "gemini_flash"
+          },
+          {
+            "similarity_score": 0.0,
+            "decision": "different",
+            "comment": "The answers differ in sign, order of magnitude (microcoulombs vs hundreds of microcoulombs), and numeric value. Units are compatible, but the values are neither numerically nor structurally similar.",
+            "model_1": "gemini_2_5_pro",
+            "model_2": "gemini_flash"
+          }
+        ],
+        "agreement": {
+          "agreement_ratio": 0.0,
+          "average_similarity": 0.075,
+          "disagreements": [
+            {
+              "similarity_score": 0.0,
+              "decision": "different",
+              "comment": "The units are compatible (\u03bcC), but the numerical values differ significantly in both magnitude and sign. The values -7.78 and 12.2 are not numerically close, nor do they match symbolically or by expression. Therefore, these answers represent physically different results.",
+              "model_1": "gpt_o3",
+              "model_2": "gpt_4_2"
+            },
+            {
+              "similarity_score": 0.0,
+              "decision": "different",
+              "comment": "The answers differ both in magnitude and sign: one gives Q = -7.78 \u03bcC, the other Q = +133 \u03bcC. These values are numerically far apart (>2% difference), have opposite signs, and no underlying symbolic equivalence is present between them. Thus, they do not represent the same physical result.",
+              "model_1": "gpt_o3",
+              "model_2": "claude_sonnet_4"
+            },
+            {
+              "similarity_score": 0.0,
+              "decision": "different",
+              "comment": "While both answers have compatible units (microcoulombs), the numerical values differ by more than 2% and the signs are opposite, indicating physically different results (one negative and one positive charge). No structural equivalence or acceptable rounding applies.",
+              "model_1": "gpt_o3",
+              "model_2": "gemini_2_5_pro"
+            },
+            {
+              "similarity_score": 0.0,
+              "decision": "different",
+              "comment": "While both answers have the same units (microcoulombs), their magnitudes differ significantly: -7.78 \u03bcC versus -639 \u03bcC. The relative error is far greater than 2%, so numerically they are not equivalent. No symbolic or algebraic similarity is present.",
+              "model_1": "gpt_o3",
+              "model_2": "gemini_flash"
+            },
+            {
+              "similarity_score": 0.25,
+              "decision": "different",
+              "comment": "Both answers are for the charge Q in microcoulombs (\u03bcC), so the units are compatible (full score on unit criterion). However, the numerical values differ significantly: Answer 1 gives 12.2 \u03bcC, while Answer 2 derives Q = 133 \u03bcC\u2014over a factor of 10 apart, which is much greater than a 2% relative error threshold, so zero points for numeric and symbolic/decimal closeness. Expression equivalence and rounding/notation are also not applicable since only Answer 2 contains derivation steps; the answers are fundamentally different in value.",
+              "model_1": "gpt_4_2",
+              "model_2": "claude_sonnet_4"
+            },
+            {
+              "similarity_score": 0.25,
+              "decision": "different",
+              "comment": "Units are compatible (both in microcoulombs), but the numerical values 12.2 and 6.38 differ by more than 2%, so no credit for numeric, symbolic, rounding, or expression similarity.",
+              "model_1": "gpt_4_2",
+              "model_2": "gemini_2_5_pro"
+            },
+            {
+              "similarity_score": 0.25,
+              "decision": "different",
+              "comment": "Both answers have compatible units (microcoulombs), but the numeric values differ in magnitude and sign well beyond the allowable error, and there is no symbolic or expression similarity.",
+              "model_1": "gpt_4_2",
+              "model_2": "gemini_flash"
+            },
+            {
+              "similarity_score": 0.0,
+              "decision": "different",
+              "comment": "Answer 1 gives Q = 133 \u03bcC while Answer 2 gives Q = 6.38 \u03bcC. Both have the same units (\u03bcC), but the numerical values differ by more than a factor of 20, far exceeding the 2% relative error threshold. No symbolic match or expression equivalence is present. Thus, they do not represent the same physical result.",
+              "model_1": "claude_sonnet_4",
+              "model_2": "gemini_2_5_pro"
+            },
+            {
+              "similarity_score": 0.0,
+              "decision": "different",
+              "comment": "Units are both coulombs, so dimensionally compatible (score 0.25). However, the answers differ both in sign (+133 \u03bcC vs -639 \u03bcC) and magnitude (5x apart and opposite polarity), which is incompatible. Numeric closeness is zero (relative error >2%). No symbolic/decimal match or meaningful expression equivalence; signs and values suggest fundamentally different physical interpretations (e.g., equilibrium with opposite charge directions).",
+              "model_1": "claude_sonnet_4",
+              "model_2": "gemini_flash"
+            },
+            {
+              "similarity_score": 0.0,
+              "decision": "different",
+              "comment": "The answers differ in sign, order of magnitude (microcoulombs vs hundreds of microcoulombs), and numeric value. Units are compatible, but the values are neither numerically nor structurally similar.",
+              "model_1": "gemini_2_5_pro",
+              "model_2": "gemini_flash"
+            }
+          ]
+        },
+        "difficulty": {
+          "unique_answer_count": 5,
+          "disagreement_ratio": 1.0,
+          "difficulty_label": "hard"
+        }
+      }
+    ]
+  }
+]
